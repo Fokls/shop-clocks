@@ -1,6 +1,64 @@
-// mixins//
+//mixins
 
-//fonts//
+//fonts-------------------------------------
 
-<link href="https://fonts.googleapis.com/css?family=PT+Sans:regular,italic,700,700italic" rel="stylesheet" />
-//Properties//@extend
+@import url(https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap);
+
+//default font------------------------------------------
+$fontfamily:'PT Sans';
+
+
+//Properties ---------------------------
+$minwidth:320px;
+$mw:950;
+$md1:$mw+12;
+$md2:991.98;
+$md3:767.98;
+$md4:479.98;
+
+//Normalizing
+//@import 'null.scss';
+body{
+    color:#000;
+    font-size: 14px;
+    &._lock{
+        overflow: hidden;
+        @media(max-width:$md3+px){
+            //width:100%;
+            //positon:fixed;
+            //overflow:hidden;
+        }
+    }
+};
+
+
+
+
+//container//wrapper
+.wrapper{
+    width: 100%;
+    min-height: 100%;
+    overflow: hidden;
+    display:fixed;
+    flex-direction: column;
+    &.loaded{
+        
+    }
+};
+
+._container{
+    max-width: $mw+px;
+    margin: 0 auto;
+    @media (max-width:$md2+px_){
+        max-width:970px; }
+    @media(max-width:$md2+px){
+        max-width:750px;
+    }
+    @media(max-width:$md3+px){
+        max-width:none;
+        padding: 0 10px;
+    }
+}
+
+@import 'header';
+ 
