@@ -1,24 +1,93 @@
 .header{
-    &__container{
 
+    background-color: #1c242a;
+
+    &__container{
+        display: flex;
+        align-items: center;
+        position: relative;
     }
 
     &__logo{
 
     }
+}
 
-    &__{
-
-    }
+.menu{
+        flex:1 1 auto;
+        padding-left: 30px/950px*100%;
 
     &__actions{
 
         
     }
+
+    &__icons{
+
+    }
+
+    &__list{
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        li{
+            margin: 0 15px;
+        }
+    }
+
+    &__link{
+        letter-spacing: 1.4px;
+        color: #fff;
+        font-family: 'PT Sans', sans-serif;
+        text-transform: uppercase;
+        text-decoration: none;
+    }
+}
+
+.actions-header{
+    display: flex;
+    align-items: center;
+    height: 75px;
+    &__region{
+        @extend .menu__link;
+        padding-left: 30px;
+        line-height: 18px;
+        background: url('../img/icons/globe.png') left no-repeat;
+    }
+
+    &__user{
+        margin-left: 30px;
+    }
+}
+
+.user-header{
+    &__icon{
+        cursor: pointer;
+    }   
+    &__menu{
+        position: absolute;
+        list-style: none;
+        top: 78px;
+        right: 0;
+        background: #1c242a;
+        padding: 20px;
+        li{
+            margin-bottom: 10px;
+            color: #fff;
+
+        }
+    }
+    &__link{
+
+
+    }
+
 }
 
 .icon-menu{
-    display:none;
+   display: none;
     position:absolute;
     top:18px;
     right:10px;
